@@ -1,0 +1,207 @@
+
+/* First section */
+.headImage {
+    width: 100%;
+    height: 200px;
+    /* background-image: url("../images/headerImage.jpg"); */
+    position: relative; /* Cho overlay hoạt động */
+    z-index: 0;
+}
+
+.headImage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 50% */
+}
+
+#foodHeadImage1{
+    background-image: url("../images/headerImage.jpg");
+}
+
+#foodFirstLine{
+    font-size: 3.5rem;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+#foodFirstLineDescription{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.mainSectionFood{
+    display: flex;
+}
+
+/* Left box */
+.leftbox {
+    height: 400px;
+    width: 200px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 65px; /* Navbar cao khoảng 60px */
+    z-index: 5;
+    color: #606c38;
+}
+.subCategory{
+    text-align: center;
+    margin-top:10px;
+}
+.subCategoryItem{
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+.subCategoryItem:hover{
+    background-color: #283618;
+    color: white;
+}
+.subCategoryItemContent{
+    margin: 0;
+    text-align: center;
+}
+
+.listFood{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.search-bar{
+    height: 30px;
+    width: 100%;
+    justify-items: center;
+    display: flex;
+    margin: 20px 0 0 20px;
+}
+.searchFood{
+    width: 300px;
+    height: 30px;
+    background-color: #dde5b6;
+    margin-right: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.searchFood p, .searchFood i{
+    margin: 0;
+    color: black;
+}
+#searchFoodInput {
+    background-color: #dde5b6 !important;
+    color: black !important;
+    font-weight: 600;
+    border: none !important;
+    width: 100%;
+    outline: none; /* Loại bỏ viền xanh khi focus */
+}
+
+#searchFoodInput:focus {
+    border: none;
+    outline: none; /* Chắc chắn viền không xuất hiện khi click */
+}
+.submitbutton{
+    background-color: #dde5b6 !important;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sortFood{
+    width: 100px;
+    height: 30px;
+    background-color: #f0ead2;
+    color: black !important;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.sortFoodName{
+    display: flex;
+}
+.nav-link{
+    display: flex !important;
+    align-items: center;
+    height: 30px;
+    gap: 5px;
+}
+.sortName{
+    margin:0;
+}
+i.fa-solid.fa-ranking-star{
+    margin-left: 10px;
+}
+
+.numProducts{
+    width: 210px;
+    height: 30px;
+    background-color: #d4a373;
+    color: black !important;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+i.fa-solid.fa-list-ol{
+    margin-left: 10px;
+}
+
+
+/************************************** Item and list ********************************/
+.innerfoodList2{
+    margin: 20px 0 0 20px !important;
+}
+.foodItemButtonContent{
+    text-align: center !important;
+}
+.currentPageFoodOuter{
+    justify-items: center;
+    margin-bottom: 10px;
+}
+.currentPageFood{
+    width: 120px;
+    height: 24px;
+    background-color: #fed9b7;
+    border-radius: 5px;
+}
+.currentPageInnerFood{
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+    .search-bar{
+        display: block;
+        height: 100px;
+        justify-items: normal;
+    }
+}
+@media (max-width: 768px) {
+    #foodFirstLine {
+        font-size: 2.5rem; 
+    }
+    .subCategory{
+        font-size: 1rem;
+    }
+}
+
+/* Khi màn hình nhỏ hơn 480px (mobile) */
+@media (max-width: 480px) {
+    #foodFirstLine {
+        font-size: 1.8rem;
+    }
+    .subCategory{
+        font-size: 0.8rem;
+    }
+}

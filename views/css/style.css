@@ -1,0 +1,442 @@
+/* General Styles */
+   body {
+    font-family: "Montserrat", Arial, Sans-serif;
+    margin: 0;
+    padding: 0;
+   }
+
+   /* Header Styles */
+   header {
+    background-color: #e9c46a;
+   }
+   #dog-image{
+      display: inline-flex;
+      flex-direction: row;
+      height: 50px;
+      width: 50px;
+      margin-left: 30px;
+   }
+   .bg-body-tertiary{
+      background-color: #333;
+   }
+   nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #e9c46a; /* Adjust color if needed */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+      z-index: 1000; /*Ensures it stays on top*/
+      padding: 10px 0; /* Adds space inside the nav */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: visible;
+  }
+  
+  .nav-element {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center; /* Changed from baseline to center */
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+  
+  nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+  }
+  
+  nav ul li a {
+      color: #0d1b2a;
+      text-decoration: none;
+      font-weight: 600;
+  }
+  
+  nav ul li a:hover {
+      color: #faedcd;
+  }
+  #dropdown{
+   font-weight: 600;
+   z-index: 1000;
+  }
+  #dropdown:hover{
+   color:#faedcd;
+  }
+  
+  .Login-SignUp {
+      display: inline-flex;
+      flex-direction: row;
+      padding-right: 20px;
+  }
+  
+  #Login, #SignUp, #Logout {
+      text-decoration: none;
+      font-weight: 600;
+      color: #0d1b2a;
+  }
+  
+  #Login:hover, #SignUp:hover, #Logout:hover {
+      color: #faedcd;
+  }
+  
+  /* Prevent page content from going under the navbar */
+  body {
+      padding-top: 55px; /* Adjust based on the navbar's height */
+  }
+  
+
+
+
+
+
+   /* Main Content */
+   main {
+    padding-top: 14px;
+    color: whitesmoke;
+   }
+   .pageSection{
+      width: 100%;
+      height: 1680px;
+      text-align: center;
+   }
+   .pageSection h2{
+      padding-top: 20px;
+   }
+
+   /* Section 1 */
+   #pageSection-1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #606c38;
+      height: auto;
+      padding: 30px;
+   }
+   .introHome{
+      display: flex;
+      background-color: #283618;
+      width: 80%;
+      height: 70%;
+   }
+   #introHomePic {
+      width: 60%; /* Chiếm hết chiều rộng của parent */
+      aspect-ratio: 16 / 9; /* Tỉ lệ khung hình ban đầu (40rem x 31rem) */
+      padding: 15px;
+      object-fit: cover; /* Giữ hình không bị méo */
+  }
+   #intro_caption{
+      padding: 10px;
+      align-content: center;
+      text-align: left;
+      font-size: 1.2rem;
+   }
+  
+  
+   
+   /* Page section 2 (service) */
+   #pageSection-2{
+      color: #344e41;
+      background-color: #ccd5ae;
+      height: auto;
+      padding: 20px;
+   }
+   /* #servicePageSection2{
+      margin-bottom: 50px;
+   } */
+   .serviceList{
+      margin-top: 30px;
+      justify-items: center;
+   }
+   .serviceMem{
+      display: flex;
+      background-color: #a3b18a;
+      width: 70%;
+      margin-top: 75px;
+   }
+   #washDog, #hairCut{
+      width: 60%;
+      aspect-ratio: 40 / 30;
+      padding: 15px;
+      object-fit: cover;
+   }
+   #petHotel{
+      width: 50%;
+      aspect-ratio: 40 / 35;
+      padding: 15px;
+      object-fit: cover;
+   }
+   .serviceContent{
+      font-family: "Montserrat", Arial, Sans-serif;
+      align-content: center;
+      padding: 15px;
+      text-align: left;
+   }
+   .serviceCaption{
+      font-weight: 600;
+   }
+   #washButton{
+      background-color: #3a5a40 !important;
+      color: #f8edeb !important;
+      height:55px;
+      width:150px;
+      border-width: 0;
+      transition: transform 0.5s;
+   }
+
+   #washButton:hover{
+      transform: translateY(-0.5rem);
+   }
+
+
+
+
+
+
+
+
+   /* Page Section 3 (Categories) */
+   #pageSection-3{
+      color: #344e41;
+      background-color: #F6F8EF;
+      justify-items: center;
+      height: auto;
+   }
+
+   .categoriesList{
+      width:90%;
+      /* background-color: #a3b18a; */
+      padding: 15px;
+   }
+   
+   .foodList, .groceries{
+      display: block;
+   }
+   #itemHeader, #foodHeader{
+      text-align: left;
+      margin-bottom: 35px;
+   }
+   .innergroceryList, .innerfoodList{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .groceryItem, .foodItem{
+      justify-items: center;
+      height: 500px;
+      width: 300px;
+      margin-right: 25px;
+      transition: transform 0.5s;
+   }
+   .groceryItem:hover, .foodItem:hover{
+      transform: translateY(-1rem) ;
+   }
+   #grocery1, #dogfood1{
+      width: 100%;
+      object-fit: contain;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
+   }
+   .groceryItemName, .foodItemName{
+      width: 100%;
+      height: 50px;
+      background-color: white;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+   }
+   .groceryItemName1,.foodItemName1{
+      text-align: left;
+      font-size: 1.2rem;
+      height: 100%;
+      align-content: center;
+      margin: 0 0 0 15px;
+      color:#606c38;
+   }
+
+   .groceryItemPrice, .foodItemPrice{
+      width: 100%;
+      height: 100px;
+      background-color: #F9FBEF;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+   }
+   .groceryItemPricePrice, .foodItemPricePrice{
+      height: 40px;
+      align-content: center;
+   }
+   .groceryItemPrice1, .foodItemPrice1{
+      font-size: 1.2rem;
+      text-align: left;
+      align-content: center;
+      margin: 0 0 0 15px;
+      color:#606c38;
+      font-weight: 300;
+   }
+   .outsideFoodItemButton{
+      justify-items: center;
+   }
+   .foodItemButton{
+      height: 50px;
+      width: 90%;
+      background-color: #C4CB9F;
+      align-content: center;
+      border-radius: 5px;
+   }
+   .foodItemButtonContent{
+      text-align: center;
+      margin:0;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #6E744D;
+   }
+
+
+   /* Page section 4 (About us) */
+   #pageSection-4{
+      color: #344e41;
+      background-color: #faedcd;
+      height: auto ;
+      padding-bottom: 20px;
+   }
+   .shopInfo{
+   justify-content: center;
+   width: 80%;
+   background: #fefae0;
+   padding: 20px;
+   margin: 30px 0 0 0;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   justify-self: center;
+   }
+
+
+
+   /* Footer Styles */
+   footer {
+    background-color: #606c38;
+    color: #fefae0;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+   }
+   .linksAndMap{
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+   }
+   .linksAndMap h5{
+      font-weight: 700;
+   }
+   .QuicklinksAndContact{
+      display: flex;
+      gap: 170px;
+   }
+   
+   .Quicklinks, .Contact, .Help{
+      display: block;
+      height: auto;
+      text-align: left;
+   }
+   .Quicklinks a, .Contact a, .Help a{
+      text-decoration: none;
+      display: block;
+      margin: 20px 0;
+      color: #fefae0;
+   }
+
+   .Quicklinks a:hover, .Contact a:hover, .Help a:hover{
+      color: #2f3e46;
+   }
+
+   .shopMap{
+      height: 300px;
+      width: 400px;
+   }
+
+   /* Flexbox Layout */
+   body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   }
+   main {
+    flex: 1;
+   }
+   @media (max-width: 760px) {
+      nav{
+         display: inline-block;
+      }
+      #dog-image{
+         display:inline-block;
+         position: absolute;
+         bottom: 25%;
+         margin:0;
+      }
+      .Login-SignUp{
+         display: inline-block;
+         position: absolute;
+         right: 3%;
+         bottom: 37%;
+         padding: 0;
+      }
+      .QuicklinksAndContact{
+         display: block;
+         justify-items: center;
+      }
+      .Quicklinks, .Contact, .Help{
+         text-align: center;
+      }
+   }
+
+   /* Responsive dog image */
+   @media (max-width: 1100px){
+      .introHome{
+         display: block;
+      }
+      #introHomePic{
+         width: 100%;
+         max-width: 600px;
+      }
+      #intro_caption{
+         font-size: 0.9rem;
+      }
+   }
+
+   /* Reponsive footer and service page ( page section 2) */
+   @media (max-width: 1200px){
+      .serviceMem{
+         display: block;
+         width: 90%;
+      }
+      #washDog, #hairCut{
+         width: 100%;
+         max-width: fit-content;
+         aspect-ratio: 16/9;
+         object-fit: cover;
+      }
+      #petHotel{
+         width: 100%;
+         max-width: fit-content;
+      }
+
+
+      .QuicklinksAndContact{
+         justify-content: center;
+      }
+      .linksAndMap{
+         display: block;
+      }
+
+      .shopMap{
+         width: 100%; /* Chiều rộng full container */
+         height: auto; /* Đảm bảo giữ đúng tỷ lệ */
+         aspect-ratio: 4 / 3; /* Tỷ lệ khung hình */
+         object-fit: cover;
+         max-width: 48rem; /* Giới hạn chiều rộng tối đa nếu cần */
+      }
+   }
