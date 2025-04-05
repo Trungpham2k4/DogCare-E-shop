@@ -7,11 +7,6 @@ $controller = isset($_GET['page']) ? $_GET['page'] : 'home';
 
 // Gọi controller tương ứng
 switch ($controller) {
-    case 'admin':
-        include '../views/admin/shared/header.php';
-        include '../views/admin/dashboard.php';
-        include '../views/admin/shared/footer.php';
-        break;
     case 'login':
         loadView($controller);
         break;
