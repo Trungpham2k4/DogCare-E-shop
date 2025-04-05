@@ -1,4 +1,6 @@
 <?php
+require_once '../controllers/ProductDetailController.php';
+require_once '../controllers/ProductController.php';
 // Điều hướng chính
 if (session_status() === PHP_SESSION_NONE) {
     session_start(); // Khởi động session 1 lần duy nhất
@@ -11,9 +13,6 @@ switch ($controller) {
         loadView($controller);
         break;
     case 'food':
-        require_once '../controllers/ProductController.php';
-
-
         $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : ($_SESSION['prev_limit' ] ?? 12);
         $offset = isset($_GET['offset']) ? max(0, (int)$_GET['offset']) : ($_SESSION['prev_offset'] ?? 0);
 
@@ -26,11 +25,20 @@ switch ($controller) {
         $productController = new ProductController($limit, $offset, $sort);
         $productController->index($category); // Hàm này có thể load view phù hợp
         break;
-
     case 'item':
-    case 'about':
-    case 'service':
-    case 'contact':
+        $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : ($_SESSION['prev_limit' ] ?? 12);
+        $offset = isset($_GET['offset']) ? max(0, (int)$_GET['offset']) : ($_SESSION['prev_offset'] ?? 0);
+
+        $valid_sorts = ['a-z', 'z-a', 'min', 'max', 'None'];
+        $sort = isset($_GET['sort']) && in_array($_GET['sort'], $valid_sorts) ? $_GET['sort'] : ($_SESSION['prev_sort'] ?? "");
+        // echo $_SESSION['prev_sort'];
+        // echo $sort;
+        $category = "Item";
+        
+        $productController = new ProductController($limit, $offset, $sort);
+        $productController->index($category);
+        break;
+    case 'product_detail':
         require_once '../models/UserModel.php';
         $user = new UserModel();
         if(isset($_COOKIE['user'])){
@@ -44,6 +52,16 @@ switch ($controller) {
             header("Location: index.php?page=login");
             exit;
         }
+        $productID =  $_GET['productID'];
+
+
+        $productDetailController = new ProductDetailController();
+        $productDetailController->index($productID);
+        break;
+
+    case 'about':
+    case 'service':
+    case 'contact':
     case 'home':
         loadView($controller);
         break;

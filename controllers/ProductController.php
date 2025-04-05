@@ -32,14 +32,24 @@ class ProductController {
             $totalPage = 1;
             $currentPage = 1; 
         }
-
-        $this->loadView('food', [
-            'foods' => $foods,
-            'totalPage' => $totalPage,
-            'currentPage' => $currentPage,
-            'limit' => $this->limit,
-            'offset' => $this->offset
-        ]);
+        if ($category === "CAT001"){
+            $this->loadView('food', [
+                'foods' => $foods,
+                'totalPage' => $totalPage,
+                'currentPage' => $currentPage,
+                'limit' => $this->limit,
+                'offset' => $this->offset
+            ]);
+        }else{
+            $this->loadView('item', [
+                'foods' => $foods,
+                'totalPage' => $totalPage,
+                'currentPage' => $currentPage,
+                'limit' => $this->limit,
+                'offset' => $this->offset
+            ]);
+        }
+        
     }
 
     public function search($query) {

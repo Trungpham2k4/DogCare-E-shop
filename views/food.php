@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="outsideFoodItemButton">
                                             <div class="foodItemButton">
-                                                <p class="foodItemButtonContent">Shop Now</p>
+                                                <a href="../controllers?index.php&page=product_detail&productID=' .$foods[$i]->getId() . '" class="foodItemButtonContent">Shop Now</a>
                                             </div>
                                         </div>
                                     </div>

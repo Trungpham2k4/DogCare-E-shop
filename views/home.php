@@ -95,7 +95,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -112,7 +112,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -129,7 +129,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -146,7 +146,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -171,7 +171,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -189,7 +189,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -207,7 +207,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         
@@ -226,7 +226,7 @@
                         </div>
                         <div class="outsideFoodItemButton">
                            <div class="foodItemButton">
-                              <p class="foodItemButtonContent">Shop Now</p>
+                              <a href="#" class="foodItemButtonContent">Shop Now</a>
                            </div>
                         </div>
                         

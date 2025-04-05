@@ -160,6 +160,7 @@ i.fa-solid.fa-list-ol{
     margin: 20px 0 0 20px !important;
 }
 .foodItemButtonContent{
+    text-decoration: none;
     text-align: center !important;
 }
 .currentPageFoodOuter{

@@ -282,8 +282,10 @@
       height: 50px;
       width: 90%;
       background-color: #C4CB9F;
-      align-content: center;
+      align-items: center;
+      justify-content: center;
       border-radius: 5px;
+      display: flex;
    }
    .foodItemButtonContent{
       text-align: center;
