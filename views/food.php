@@ -26,7 +26,7 @@
                 <div class="searchFood">
                     <!-- AJAX here -->
                     <input id="searchFoodInput" type="text" placeholder="Search">
-                    <button type="submit" onclick="searchProduct('searchFoodInput')" class="submitbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="submit" onclick="searchProduct('searchFoodInput','CAT001')" class="submitbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div class="sortFood">
                     <a class="nav-link dropdown-toggle sortFoodName" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -26,7 +26,7 @@
                 <div class="searchFood">
                     <!-- AJAX here -->
                     <input id="searchFoodInput" type="text" placeholder="Search">
-                    <button type="submit" onclick="searchProduct('searchFoodInput')" class="submitbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button type="submit" onclick="searchProduct('searchFoodInput', 'CAT002')" class="submitbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div class="sortFood">
                     <a class="nav-link dropdown-toggle sortFoodName" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,11 +34,11 @@
                         
                     </a>
                     <ul class="dropdown-menu sortFoodItem" >
-                        <li><a class="dropdown-item" href="index.php?page=food&sort=None"> None</a></li>
-                        <li><a class="dropdown-item" href="index.php?page=food&sort=a-z"><i class="fa-solid fa-arrow-up-z-a"></i> Sort A-Z</a></li>
-                        <li><a class="dropdown-item" href="index.php?page=food&sort=z-a"><i class="fa-solid fa-arrow-up-a-z"></i> Sort Z-A</a></li>
-                        <li><a class="dropdown-item" href="index.php?page=food&sort=min"><i class="fa-solid fa-arrow-up-9-1"></i> Sort Low to High Price</a></li>
-                        <li><a class="dropdown-item" href="index.php?page=food&sort=max"><i class="fa-solid fa-arrow-up-1-9"></i> Sort High to Low Price</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&sort=None"> None</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&sort=a-z"><i class="fa-solid fa-arrow-up-z-a"></i> Sort A-Z</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&sort=z-a"><i class="fa-solid fa-arrow-up-a-z"></i> Sort Z-A</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&sort=min"><i class="fa-solid fa-arrow-up-9-1"></i> Sort Low to High Price</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&sort=max"><i class="fa-solid fa-arrow-up-1-9"></i> Sort High to Low Price</a></li>
                     </ul>
                 </div>
                 <div class="numProducts">
@@ -47,8 +47,8 @@
                         
                     </a>
                     <ul class="dropdown-menu sortFoodItem">
-                        <li><a class="dropdown-item" href="index.php?page=food&limit=12&offset=<?php echo $offset; ?>">12</a></li>
-                        <li><a class="dropdown-item" href="index.php?page=food&limit=24&offset=<?php echo $offset; ?>">24</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&limit=12&offset=<?php echo $offset; ?>">12</a></li>
+                        <li><a class="dropdown-item" href="index.php?page=item&limit=24&offset=<?php echo $offset; ?>">24</a></li>
                     </ul>
 
                 </div>
@@ -61,7 +61,7 @@
                     } else {
                         for ($i = 0; $i < count($foods); $i++) {
                             echo '<div class="foodItem">
-                                    <img src="../views/images/foodPage/' . $foods[$i]->getImage() . '" alt="dogFood' . $i . '" id="dogfood1">
+                                    <img src="../views/images/itemPage/' . $foods[$i]->getImage() . '" alt="dogItem' . $i . '" id="dogfood1">
                                     <div class="foodItemName">
                                         <p class="foodItemName1">' . $foods[$i]->getName() . '</p>
                                     </div>
@@ -98,12 +98,12 @@
                                 </li>';
                         }else{
                             echo '<li class="page-item">
-                                    <a class="page-link" href= "' . 'index.php?page=food&limit='. $limit . '&offset=' . ($offset - $limit) .'" >Previous</a>
+                                    <a class="page-link" href= "' . 'index.php?page=item&limit='. $limit . '&offset=' . ($offset - $limit) .'" >Previous</a>
                                 </li>';
                         }
                         for($i = 1; $i <= $totalPage; $i++){
                             echo '<li class="page-item">
-                                <a class="page-link" href= "' . 'index.php?page=food&limit='. $limit . '&offset=' . ($i-1)*$limit .'" >' . $i . '</a>
+                                <a class="page-link" href= "' . 'index.php?page=item&limit='. $limit . '&offset=' . ($i-1)*$limit .'" >' . $i . '</a>
                             </li>';
                         }
                         if ($currentPage == $totalPage){
@@ -112,7 +112,7 @@
                                 </li>';
                         }else{
                             echo '<li class="page-item">
-                                    <a class="page-link" href= "' . 'index.php?page=food&limit='. $limit . '&offset=' . ($offset + $limit) .'" >Next</a>
+                                    <a class="page-link" href= "' . 'index.php?page=item&limit='. $limit . '&offset=' . ($offset + $limit) .'" >Next</a>
                                 </li>';
                         }
 

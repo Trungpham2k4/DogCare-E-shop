@@ -1,10 +1,13 @@
-function searchProduct(inputId){
+function searchProduct(inputId, category){
     const inputText = document.getElementById(inputId).value;
 
     fetch("http://localhost/mywebsite/api/product_api.php", {  // Gọi đúng API mới tạo
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: inputText })
+        body: JSON.stringify({ 
+            query: inputText, 
+            category: category
+        })
     })
     .then(response => response.json())
     .then(items => {
@@ -17,8 +20,9 @@ function searchProduct(inputId){
         }
         items.forEach((item, index) => {
             console.log(item.image);
+            let imagePage = item.category_id === "CAT001" ? "foodPage" : "itemPage";
             let newElement = `<div class="foodItem">
-                                <img src="../views/images/foodPage/${item.image}" alt="dogFood${index}" id="dogfood1">
+                                <img src="../views/images/${imagePage}/${item.image}" alt="dogFood${index}" id="dogfood1">
                                 <div class="foodItemName">
                                     <p class="foodItemName1">${item.name}</p>
                                 </div>
@@ -28,7 +32,7 @@ function searchProduct(inputId){
                                     </div>
                                     <div class="outsideFoodItemButton">
                                         <div class="foodItemButton">
-                                            <p class="foodItemButtonContent">Shop Now</p>
+                                            <a href="../controllers?index.php&page=product_detail&productID=${item.id}" class="foodItemButtonContent">Shop Now</a>
                                         </div>
                                     </div>
                                 </div>

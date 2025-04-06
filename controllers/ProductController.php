@@ -25,8 +25,11 @@ class ProductController {
         $this->setPagination();
         $order_by = $this->getSortOrder();
         $foods = $this->repository->getProducts($category, $this->limit, $this->offset, $order_by);
-        $totalProducts = $this->repository->getNumProducts();
-        $totalPage = ceil($totalProducts / $this->limit);
+        $totalProducts = $this->repository->getNumProducts($category);
+        $totalPage = ceil(floatval($totalProducts) / floatval($this->limit));
+        // print_r($totalProducts);
+        // print_r($this->limit);
+        // print_r($totalPage);
         $currentPage = floor($this->offset / $this->limit) + 1;
         if (empty($foods)){
             $totalPage = 1;
@@ -52,8 +55,8 @@ class ProductController {
         
     }
 
-    public function search($query) {
-        return $this->repository->searchProducts($query);
+    public function search($query, $category) {
+        return $this->repository->searchProducts($query, $category);
     }
 
     private function setPagination() {

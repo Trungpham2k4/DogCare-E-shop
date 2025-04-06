@@ -17,10 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $query = trim($data["query"]);
+    $category = trim($data["category"]);
     
     // Tạo một instance của ProductController
     $productController = new ProductController();
-    $result = $productController->search($query);
+    $result = $productController->search($query, $category);
 
     echo json_encode($result, JSON_PRETTY_PRINT); // Gửi kết quả dưới dạng json cho frontend
 }

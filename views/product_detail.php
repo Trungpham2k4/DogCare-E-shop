@@ -4,12 +4,13 @@
    <section class="product-detail-container">
     <h1 class="product-detail-cap">Product detail</h1>
         <?php
+            $imagePage = $current_product->getCategoryId() === "CAT001" ? "foodPage" : "itemPage";
             if ($current_product != null){
                 echo 
                 '
     <div class="product-image-container">
         <div class="image-container">
-            <img src="../views/images/foodPage/'. $current_product->getImage(). '" alt="food for dogs" class="image-detail">
+            <img src="../views/images/'. $imagePage  .'/'. $current_product->getImage(). '" alt="food for dogs" class="image-detail">
         </div>
         <div class="name-price-container">
             <h1>'. $current_product->getName()   . '</h1>

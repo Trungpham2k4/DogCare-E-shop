@@ -19,12 +19,14 @@
             die("Connection failed: " . $this->conn->connect_error);
             }
         }
-        public function getNumProducts(){
-            $numRows = $this->conn->query("SELECT COUNT(*) as num_row FROM products"); // Count number of products
+        public function getNumProducts($category){
+            $numRows = $this->conn->query("SELECT COUNT(*) as num_row FROM products WHERE CATEGORY_ID = '$category'"); // Count number of products
             $totalProducts = 0;
             if($numRows){
                 $temp = $numRows->fetch_assoc();
                 $totalProducts = (int) $temp["num_row"];
+            }else{
+                print_r("Failed to fetch products");
             }
             return $totalProducts;
         }
@@ -88,8 +90,8 @@
             return $foods;
         }
 
-        public function searchProducts($condition) {
-            $sql = "SELECT * FROM products WHERE NAME LIKE ?";
+        public function searchProducts($condition, $category) {
+            $sql = "SELECT * FROM products WHERE NAME LIKE ? AND CATEGORY_ID = ?";
             
             $stmt = $this->conn->prepare($sql);
             if (!$stmt) {
@@ -97,7 +99,7 @@
             }
         
             $search = "%" . $condition . "%"; // Thêm % để tìm kiếm gần đúng
-            $stmt->bind_param("s", $search);
+            $stmt->bind_param("ss", $search, $category);
             $stmt->execute();
             $result = $stmt->get_result();
         
