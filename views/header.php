@@ -32,7 +32,7 @@
                   </ul>
                </li>
                <li><a href="index.php?page=service">Services</a></li>
-               <li><a href="index.php?page=contact">Contact me</a></li>
+               <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
          </div>
          <?php if (isset($_SESSION['user_email'])):?>
