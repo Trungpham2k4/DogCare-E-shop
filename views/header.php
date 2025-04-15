@@ -35,7 +35,7 @@
                <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
          </div>
-         <?php if (isset($_SESSION['user_email'])):?>
+         <?php if (isset($_COOKIE['user'])):?>
             <div class="Login-SignUp">
                <a href="../api/logout_api.php" id="Logout">Logout</a>
             </div>
